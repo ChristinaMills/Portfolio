@@ -1,4 +1,6 @@
-new Project = function (title, URL, description, img) {
+'use strict:'
+
+function Project (title, URL, description, img) {
     this.title = title;
     this.URL = URL;
     this.description = description;
