@@ -36,3 +36,15 @@ projects.forEach(function(project) {
     console.log(project)
     $('#project-list').append(project.toHtml());
 });
+
+function handleNav () {
+  $('.tab').click( function(){
+    $('.tab-content').hide();  
+    // var clickedTab = $(this);
+    // $()
+
+  })  
+}
+handleNav();
+// $('#project-section').hide();
+// $('#about-section').hide();
