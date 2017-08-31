@@ -24,6 +24,8 @@ sourceData.forEach(function(projectObject) {
     projects.push(new Project(projectObject));
   });
 
+
+//I don't know why this doesn't work!
 var $projectList = $('#project-list')
 console.log(projectList)
 projects.forEach(function(project) {
