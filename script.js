@@ -9,14 +9,17 @@ function Project (sourceData) {
 }
 
 Project.prototype.toHtml = function() {
-    var $newProject = $('project.template').clone();
+    var $newProject = $('#proj-temp').clone();
     $newProject.removeClass('template');
 
-    $newProject.find('proj-title').text(this.title);
-    $newProject.find('URL').html(this.URL);
-    $newProject.find('description').text(this.description);
-    $newProject.find('img').html(this.img);
+    $newProject.find('#proj-title').text(this.title);
+    $newProject.find('#URL').html(this.URL);
+    $newProject.find('#description').text(this.description);
+    $newProject.find('#img').attr('src', this.img)
+    //$newProject.find('#img').html(this.img);
 
+    console.log($newProject)
+    return $newProject;
 }
 
 
@@ -26,8 +29,22 @@ sourceData.forEach(function(projectObject) {
 
 
 //I don't know why this doesn't work!
-var $projectList = $('#project-list')
-console.log(projectList)
+// var projectList = document.getElementById('project-list');
+// console.log(projectList)
+
 projects.forEach(function(project) {
+    console.log(project)
     $('#project-list').append(project.toHtml());
 });
+
+function handleNav () {
+  $('.tab').click( function(){
+    $('.tab-content').hide();  
+    var clickedTab = $(this).attr('data-content');
+    $('#' + clickedTab).show();
+
+  })  
+}
+handleNav();
+// $('#project-section').hide();
+// $('#about-section').hide();

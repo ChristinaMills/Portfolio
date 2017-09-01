@@ -15,43 +15,39 @@
                 <span class="icon-menu"></span>
                     <ul>
                         <li class="nav-item">HOME </li>
-                        <li class="nav-item">ABOUT </li>
+                        <li class="tab" data-content="about-section" >ABOUT </li>
+                        <li class="tab" data-content="project-section"> PROJECTS</li>
                         <li class="nav-item">SOCIAL MEDIA</li>
+
                         <li class="nav-item"><a href="https://github.com/ChristinaMills">GITHUB</a></li>
                     </ul>
             </nav>
-            <img src="/images/flower.jpeg" alt="its a flower">
+            <img src="images/flower.jpeg" alt="its a flower">
             <h1> Christina Mills</h1>
         </header>
 
         <main>
-            <h2>Projects</h2>
-            <ul id="project-list">
-                <li class="proj-item">
-                    <div id="proj-title">title</div>
-                    <img id= "img"> 
-                    <div id="description"></div>
-                    <div id="URL"></div>
-                </li>
+            <section id="project-section" class="tab-content">
+                <h2>Projects</h2>
+                    <ul id="project-list">
+                        <li id="proj-temp">
+                            <div id="proj-title"></div>
+                            <img id= "img"> 
+                            <div id="description"></div>
+                            <div id="URL"></div>
+                        </li>
+                    </ul>
+            </section>
 
-                <li class="proj-item">
-                        <div id="proj-title">title</div>
-                        <img id= "img"> 
-                        <div id="description"></div>
-                        <div id="URL"></div>
-                </li>
+            <section id="about-section" class="tab-content">
+                <h2> ABOUT ME</h2>
+                    <p> LOTS OF INTERESTING AND IMPRESSIVE INFORMATION ABOUT YOURS TRULY. LOTS OF INTERESTING AND IMPRESSIVE INFORMATION ABOUT YOURS TRULY. LOTS OF INTERESTING AND IMPRESSIVE INFORMATION ABOUT YOURS TRULY</p>
+            </section>
 
-                <li class="proj-item">
-                        <div id="proj-title">title</div>
-                        <img id= "img"> 
-                        <div id="description"></div>
-                        <div id="URL"></div>
-                </li>
-            </ul>
         </main>
+        <script type="text/javascript" src="jquery-3.2.1copy.js"></script>
         <script type="text/javascript" src="sourceData.js"></script>
         <script type="text/javascript" src="script.js"></script>
-        <script type="text/javascript" src="jquery-3.2.1copy.js"></script>
     </body>
 
 
