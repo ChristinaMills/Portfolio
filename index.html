@@ -7,6 +7,15 @@
 
 
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        
+        <template id="project-template">
+            <h3>{{title}}</h3>
+            <img src="{{img}}">
+            <div class="description">{{description}}</div>
+           <p class="links"> <a  href="{{URL}}">Go project address</a></p>
+        </template>
+    
+    
     </head>
 
     <body>
@@ -30,12 +39,12 @@
             <section id="project-section" class="tab-content">
                 <h2>Projects</h2>
                     <ul id="project-list">
-                        <li id="proj-temp">
+                        <!-- <li id="proj-temp">
                             <div id="proj-title"></div>
                             <img id= "img"> 
                             <div id="description"></div>
                             <div id="URL"></div>
-                        </li>
+                        </li> -->
                     </ul>
             </section>
 
@@ -46,8 +55,10 @@
 
         </main>
         <script type="text/javascript" src="jquery-3.2.1copy.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
         <script type="text/javascript" src="sourceData.js"></script>
         <script type="text/javascript" src="script.js"></script>
+        <script> Article.fetchAll();</script>
     </body>
 
 

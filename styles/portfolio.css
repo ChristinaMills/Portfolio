@@ -20,14 +20,22 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-li {
-    list-style-type: none;
+h3 {
+    text-align: center;
+    text-decoration: underline;
 }
 
-li > div {
+.description {
     text-align: center;
-    font-size: 2em;
+    font-style: italic;
 }
+
+.links{
+    text-align: center;
+    color: red;
+    font-size: 14px;
+}
+
 
 img {
     width: 100%;
