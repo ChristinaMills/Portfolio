@@ -35,15 +35,14 @@ function handleNav () {
   })  
 }
 handleNav();
-// $('#project-section').hide();
-// $('#about-section').hide();
+
 
 Project.fetchAll = function() {
     if( localStorage.sourceData ) {
         Project.loadAll(JSON.parse(localStorage.getItem('sourceData')));
         console.log("i am doing th IF");
         console.log(Project)
-        
+
         projects.forEach(function(project) {
             console.log(project)
             $('#project-list').append(project.toHtml());
