@@ -10,27 +10,10 @@ function Project (sourceData) {
 
 Project.prototype.toHtml = function() {
     var template = $('#project-template').html()
-    console.log(template)
     var templateFiller = Handlebars.compile(template)
-
     var filledTemplate = templateFiller(this)
-    console.log("this is the :", filledTemplate)
-    console.log("this is this", this)
- 
-  
+    console.log("this is the template" + filledTemplate)
     return filledTemplate;
-
-    // var $newProject = $('#proj-temp').clone();
-    // $newProject.removeClass('template');
-
-    // $newProject.find('#proj-title').text(this.title);
-    // $newProject.find('#URL').html(this.URL);
-    // $newProject.find('#description').text(this.description);
-    // $newProject.find('#img').attr('src', this.img)
-    // //$newProject.find('#img').html(this.img);
-
-    // console.log($newProject)
-    // return $newProject;
 }
 
 Project.loadAll = function(sourceData) {
@@ -40,14 +23,8 @@ Project.loadAll = function(sourceData) {
     });
 };
 
-//I don't know why this doesn't work!
-// var projectList = document.getElementById('project-list');
-// console.log(projectList)
 
-projects.forEach(function(project) {
-    console.log(project)
-    $('#project-list').append(project.toHtml());
-});
+
 
 function handleNav () {
   $('.tab').click( function(){
@@ -62,14 +39,24 @@ handleNav();
 // $('#about-section').hide();
 
 Project.fetchAll = function() {
-    if(localStorage.sourceData) {
+    if( localStorage.sourceData ) {
         Project.loadAll(JSON.parse(localStorage.getItem('sourceData')));
+        console.log("i am doing th IF");
+        console.log(Project)
+        
+        projects.forEach(function(project) {
+            console.log(project)
+            $('#project-list').append(project.toHtml());
+        });
+    
     }
     else {
         $.getJSON('sourceData.json')
-        .done(data => {
-          localStorage.setItem('sourceData', JSON.stringify(data));
-          Project.loadAll(data)
+        .done( function (sourceData) {
+          localStorage.setItem('sourceData', JSON.stringify(sourceData));
+          Project.loadAll(sourceData)
+          console.log("I am in the setItem");
+          project.toHtml();
         })
         .fail(() => {
           alert('nope');
