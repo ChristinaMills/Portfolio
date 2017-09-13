@@ -1,29 +1,74 @@
-@font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?2ypg2p');
-  src:  url('fonts/icomoon.eot?2ypg2p#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?2ypg2p') format('truetype'),
-    url('fonts/icomoon.woff?2ypg2p') format('woff'),
-    url('fonts/icomoon.svg?2ypg2p#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
+nav > ul {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        direction: horizontal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+nav {
+    background-color: #435fc1;
+    border: 1px solid #435fc1;
+    display: flex;
+    width: 100%; 
+}
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+body {
+    background-color: #c8dbf6;
+}
+
+.nav-item {
+    display: inline-block;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.description {
+    text-align: center;
+    font-style: italic;
+}
+
+.links{
+    text-align: center;
+    color: red;
+    font-size: 14px;
+}
+
+
+img {
+    width: 100%;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .icon-menu:before {
-  content: "\e9bd";
+    content: "\e9bd";
+}
+
+@media (min-width: 400px) {
+    .icon-menu {
+    display: none
+    }
+}
+
+
+#main-nav ul {
+    display: none;
+    padding: 0;
+    list-style: none;
+    clear: both;
+  }
+  
+#main-nav:hover ul {
+    display: block;
 }

@@ -1,6 +1,9 @@
 'use strict:'
 var projects = [];
 
+var app = app || {}
+
+
 function Project (sourceData) {
     this.title = sourceData.title;
     this.URL = sourceData.URL;
@@ -8,43 +11,30 @@ function Project (sourceData) {
     this.img = sourceData.img;
 }
 
+
+
 Project.prototype.toHtml = function() {
     var template = $('#project-template').html()
     var templateFiller = Handlebars.compile(template)
     var filledTemplate = templateFiller(this)
-    console.log("this is the template" + filledTemplate)
+    
     return filledTemplate;
 }
 
 Project.loadAll = function(sourceData) {
-
-    sourceData.forEach(function(projectObject) {
-    projects.push(new Project(projectObject));
-    });
+    
+        sourceData.forEach(function(projectObject) {
+        projects.push(new Project(projectObject));
+        });
 };
 
-
-
-
-function handleNav () {
-  $('.tab').click( function(){
-    $('.tab-content').hide();  
-    var clickedTab = $(this).attr('data-content');
-    $('#' + clickedTab).show();
-
-  })  
-}
-handleNav();
-
-
 Project.fetchAll = function() {
+
     if( localStorage.sourceData ) {
         Project.loadAll(JSON.parse(localStorage.getItem('sourceData')));
-        console.log("i am doing th IF");
-        console.log(Project)
-
+        
         projects.forEach(function(project) {
-            console.log(project)
+            
             $('#project-list').append(project.toHtml());
         });
     
@@ -62,3 +52,27 @@ Project.fetchAll = function() {
         });
     }
 }
+
+(function( module) { 
+    const navView = {}
+    console.log("i am in the handleNAV")
+
+    navView.handleNav = function () {
+        $('.tab').click( function(){
+        $('.tab-content').hide();  
+        var clickedTab = $(this).attr('data-content');
+        $('#' + clickedTab).show();
+        
+        console.log(clickedTab + "THIS IS THE CLICKED TAB")
+        })  
+    }
+
+
+module.navView = navView
+}(app));
+
+app.navView.handleNav();
+//view??
+
+
+

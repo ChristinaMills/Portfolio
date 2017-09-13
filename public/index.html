@@ -2,9 +2,9 @@
 <html>
     <head>
         <title> Christina's Portfolio </title>
-        <link rel="stylesheet" type="text/css" href="styles/portfolio.css">
-        <link rel="stylesheet" type="text/css" href="styles/style.css">
-
+        <link rel="stylesheet" type="text/css" href="styles/base.css">
+        <link rel="stylesheet" type="text/css" href="styles/icon.css">
+        <link rel="stylesheet" type="text/css" href="styles/modules.css">
 
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         
@@ -22,10 +22,10 @@
         <header>
             <nav id="main-nav">
                 <span class="icon-menu"></span>
-                    <ul>
+                    <ul id="nav-ul">
                         <li class="nav-item">HOME </li>
-                        <li class="tab" data-content="about-section" >ABOUT </li>
-                        <li class="tab" data-content="project-section"> PROJECTS</li>
+                        <li class="nav-item" class="tab" data-content="about-section" >ABOUT </li>
+                        <li class="nav-item" class="tab" data-content="project-section"> PROJECTS</li>
                         <li class="nav-item">SOCIAL MEDIA</li>
 
                         <li class="nav-item"><a href="https://github.com/ChristinaMills">GITHUB</a></li>
@@ -39,12 +39,7 @@
             <section id="project-section" class="tab-content">
                 <h2>Projects</h2>
                     <ul id="project-list">
-                        <!-- <li id="proj-temp">
-                            <div id="proj-title"></div>
-                            <img id= "img"> 
-                            <div id="description"></div>
-                            <div id="URL"></div>
-                        </li> -->
+                        
                     </ul>
             </section>
 
@@ -56,10 +51,8 @@
         </main>
         <script type="text/javascript" src="jquery-3.2.1copy.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
-        <script type="text/javascript" src="sourceData.js"></script>
-        <script type="text/javascript" src="script.js"></script>
-        <script> Project.fetchAll();</script>
+        <script type="text/javascript" src="scripts/model.js"></script>
+<!--        
+        <script> Project.fetchAll(); </script> -->
     </body>
-
-
 </html>
