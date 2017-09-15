@@ -1,5 +1,6 @@
+var app = app || {};
 
-page('/', app.Project.init)
-// page('/about'), app.aboutController.init;
+page('/', app.Project);
+// page('/about'), app.aboutController;
 
 page();

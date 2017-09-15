@@ -4,9 +4,13 @@ const PORT = process.env.PORT || 4000;
 
 app.use( express.static( './public') );
 
-app.get('/', function( request, response ) {
+app.get('/projects', function( request, response ) {
     response.sendFile( '/data/sourceData.json', {root: './public'} );
 });
+
+app.get('/about', function( request, response ){
+    app.aboutController.init();
+})
 
 
 app.listen(PORT, function() {
