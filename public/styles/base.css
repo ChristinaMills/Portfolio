@@ -1,0 +1,46 @@
+body {
+    background-color: #c8dbf6;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+img {
+    width: 100%;
+}
+
+.description {
+    text-align: center;
+    font-style: italic;
+}
+
+.links{
+    text-align: center;
+    color: red;
+    font-size: 14px;
+}
+
+/* nav {
+    background-color: #435fc1;
+    border: 1px solid #435fc1;
+} */
+
+header {
+    margin: 0 auto 2rem;
+    padding: 1rem 2rem 2rem;
+    width: 80%;
+}
+
+nav > a {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+} 

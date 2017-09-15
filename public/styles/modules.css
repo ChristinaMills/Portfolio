@@ -1,0 +1,16 @@
+#main-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-ul {
+    display: flex;
+    flex-direction: row;
+    
+}
+    
+.nav-item {
+    flex: 1 1 100%;
+    flex-direction: row;
+}
+

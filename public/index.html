@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Christina's Portfolio </title>
+        <link rel="stylesheet" type="text/css" href="styles/base.css">
+        <link rel="stylesheet" type="text/css" href="styles/icon.css">
+        <link rel="stylesheet" type="text/css" href="styles/modules.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        
+        <template id="project-template">
+            <h3>{{title}}</h3>
+            <img src="{{img}}">
+            <div class="description">{{description}}</div>
+           <p class="links"> <a  href="{{URL}}">Go project address</a></p>
+        </template>
+    
+    
+    </head>
+
+    <body>
+        <header>
+            <nav id="main-nav">
+                <span class="icon-menu"></span>
+                    <ul id="nav-ul">
+                        <a id="home">HOME </a>
+                        <a id="about" class="tab" data-content="about-section" href="/about">ABOUT </a>
+                        <a id="projects" class="tab" data-content="project-section" href="/"> PROJECTS</a>
+                        <a id="social">SOCIAL MEDIA</a>
+                        <a id="github" href="https://github.com/ChristinaMills">GITHUB</a>
+                    </ul>
+            </nav>
+            <img src="images/flower.jpeg" alt="its a flower">
+            <h1> Christina Mills</h1>
+        </header>
+
+        <main>
+            <section id="project-section" class="tab-content">
+                <h2>Projects</h2>
+                    <ul id="project-list">
+                        
+                    </ul>
+            </section>
+
+            <section id="about-section" class="tab-content">
+                <h2> ABOUT ME</h2>
+                    <p> LOTS OF INTERESTING AND IMPRESSIVE INFORMATION ABOUT YOURS TRULY. LOTS OF INTERESTING AND IMPRESSIVE INFORMATION ABOUT YOURS TRULY. LOTS OF INTERESTING AND IMPRESSIVE INFORMATION ABOUT YOURS TRULY</p>
+            </section>
+
+        </main>
+        <script type="text/javascript" src="jquery-3.2.1copy.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+        <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+        <script type="text/javascript" src="scripts/project.js"></script>
+        <script type="text/javascript" src="/scripts/controllers/routes.js"> </script>
+        
+        
+       <script>app.Project.fetchAll();</script> 
+    </body>
+</html>
