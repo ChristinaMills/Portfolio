@@ -4,8 +4,8 @@ const PORT = process.env.PORT || 4000;
 
 app.use( express.static( './public') );
 
-app.get('/', function( request, response ) {
-    response.sendFile( 'index.html', {root: './public'} );
+app.get('/projects', function( request, response ) {
+    response.sendFile( '/data/sourceData.json', {root: './public'} );
 });
 
 app.listen(PORT, function() {

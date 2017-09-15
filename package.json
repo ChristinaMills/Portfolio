@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ChristinaMills/Portfolio#readme",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "page": "^1.7.1"
   }
 }
