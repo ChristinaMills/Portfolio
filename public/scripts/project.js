@@ -31,7 +31,7 @@ function test ( module ) {
 
     Project.fetchAll = function() {
         console.log("in the fetch all");
-        $.get('/projects')
+        $.get('/')
         .done( function (sourceData) {
             console.log(sourceData)
             Project.loadAll(sourceData)
