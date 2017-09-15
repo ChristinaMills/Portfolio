@@ -40,7 +40,7 @@ function test ( module ) {
                 $('#project-list').append(project.toHtml())
         })})
         .fail(() => {
-            alert('nope');
+            alert('did not fetch all');
         });
     };
 
