@@ -1,6 +1,6 @@
 var app = app || {};
 
-page('/', app.Project);
-// page('/about'), app.aboutController;
+page('/projects', app.Project.fetchAll );
+page('/about', app.aboutController.init);
 
 page();

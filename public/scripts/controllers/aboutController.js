@@ -2,10 +2,9 @@
 var app = app || {};
 
 (function ( module ) {
-    const aboutController = {}
+    const aboutController = {};
     aboutController.init = () => {
-        $('#projects').hide();
-        $('#about').hide();
+        $('#project-section').hide();
         $('#about').show();
         
     }
